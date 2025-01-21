@@ -55,12 +55,9 @@ spec:
           - name: DATABASE_USERNAME
             value: "postgres"
           - name: JDBC_DATABASE_URL
-            value: "jdbc:postgresql://{{ .Chart.Name }}-postgresql:5432/postgres"
+            value: {{ .Values.db.url | quote }}
           - name: DATABASE_PASSWORD
-            valueFrom:
-              secretKeyRef:
-                name: {{ .Chart.Name }}-postgresql
-                key: postgresql-password
+            value: {{ .Values.db.password | quote }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
