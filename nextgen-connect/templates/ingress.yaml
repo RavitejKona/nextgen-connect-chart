@@ -35,8 +35,10 @@ spec:
           - path: {{ .path }}
             pathType: {{ .pathType | default "Prefix" }}          
             backend:
-              serviceName: {{ $fullName }}
-              servicePort: {{ $svcPort }}
+              service:
+                name: {{ $fullName }}  # Reference the service correctly here
+                port:
+                  number: {{ $svcPort }}  # Port number from values.yaml
           {{- end }}
     {{- end }}
   {{- end }}
