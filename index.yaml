@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  nextgen-connect:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2025-01-21T23:58:18.9003993+05:30"
+    description: A Helm chart for Kubernetes
+    digest: 488a13407b7a85cd7ec61e217baf5e117e2cb0963cfb6b1de11d01ce2a729676
+    name: nextgen-connect
+    type: application
+    urls:
+    - https://ravitejkona.github.io/nextgen-connect-chart/nextgen-connect-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-01-21T23:58:18.898091+05:30"
